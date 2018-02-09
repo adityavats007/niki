@@ -1,13 +1,15 @@
 
 #include<bits/stdc++.h>
 using namespace std ;
-int co=0;
-int res;
+	static int co;
+   int res;
 void generateAllStringsUtil(int K, char str[], int n)
 {
 
+
 	if (n == K)
 	{
+		
 		str[n] = '\0' ;
 		co++;
 	//cout << str << " ";
@@ -44,10 +46,14 @@ void generateAllStrings(int K )
 
 int main()
 {
-	int K;
+	int K,t,i;
+	cin>>t;
+	for(i=0;i<t;i++)
+	{
+		co=0;
 	cin>>K;
 	generateAllStrings (K) ;
 	cout << res<< " ";
+}
 	return 0;
 }
-//////////
