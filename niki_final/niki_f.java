@@ -1,21 +1,22 @@
 import java.util.*;
 
 class TestClass {
-    static int count=0;
-     static int res;
+static int res;
+static int count;
        public static int generate(int k, char str[],int n)
     {
         if (n == k)
-       //System.out.println(count);
+       //System.out.println(res);
         	if (n == k)
 	{
+	 
 		// terminate binary string
 		//str[n] = '\0' ;
 		 String st = new String(str);
 		 //System.out.println(st);
 		 count++;
 	res=count%1000000007;
-		
+ 
 		return 0 ;
 	}
 	
@@ -41,10 +42,14 @@ class TestClass {
         
     }
     public static void main(String args[] ) throws Exception {
-       
         Scanner s=new Scanner(System.in);
-        int k;
-        k=s.nextInt();
+        int k,t,i;
+        t=s.nextInt();
+        for(i=0;i<t;i++)
+        {
+           
+            count=0;
+       k=s.nextInt();
         char str[]=new char[k];
         if(k==0)
         ;
@@ -57,8 +62,8 @@ class TestClass {
             str[0]='1';
             generate(k,str,1);
         }
-        System.out.println(res);
-      
-        
+       
+       System.out.println(res);
+        }
     }
 }
